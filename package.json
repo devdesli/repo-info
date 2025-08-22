@@ -1,0 +1,17 @@
+{
+    "type": "module",
+    "name": "repo-info",
+    "version": "1.0.0",
+    "description": "get information of any public repository",
+    "main": "./js/index.js",
+    "scripts": {
+        "start": "node ./js/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://100.73.19.6:3000/devdesli/repo-info.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
