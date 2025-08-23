@@ -1,5 +1,3 @@
-import username from './main.js';
-import repo_name from './main.js';
 async function getData(username, repo_name) {
   const url = `https://api.codetabs.com/v1/loc?github=${username}/${repo_name}`;
   console.log("Fetching:", url); // debug
@@ -11,10 +9,11 @@ async function getData(username, repo_name) {
 
     const result = await response.json();
     console.log("Result:", result);
+    return result; // Return the result
   } catch (error) {
     console.error("Error:", error.message);
+    throw error; // Re-throw the error to handle it in the main script
   }
 }
 
-getData(username, repo_name);
 export default getData;

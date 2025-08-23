@@ -1,5 +1,3 @@
-import username from './main.js';
-import repo_name from './main.js';
 async function getRepoInfo(user, repo) {
   const url = `https://api.github.com/repos/${user}/${repo}`;
   try {
@@ -14,7 +12,7 @@ async function getRepoInfo(user, repo) {
     }
 
     const data = await response.json();
-    console.log({
+    const result = {
       name: data.full_name,
       description: data.description,
       stars: data.stargazers_count,
@@ -22,11 +20,13 @@ async function getRepoInfo(user, repo) {
       watchers: data.watchers_count,
       issues: data.open_issues_count,
       license: data.license?.name,
-    });
+    };
+    console.log(result);
+    return result;
   } catch (err) {
     console.error(err.message);
+    throw err;
   }
 }
 
-getRepoInfo(username, repo_name);
 export default getRepoInfo;
