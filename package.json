@@ -3,9 +3,9 @@
     "name": "repo-info",
     "version": "1.0.0",
     "description": "get information of any public repository",
-    "main": "./js/index.js",
+    "main": "./main.js",
     "scripts": {
-        "start": "node ./js/index.js"
+        "start": "node main.js"
     },
     "repository": {
         "type": "git",
