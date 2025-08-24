@@ -12,6 +12,14 @@ app = Flask(__name__,
 def index():
     return render_template('html/index.html')
 
+@app.route('/getgitlabinfo')
+def get_gitlab_info():
+    return render_template('html/getgitlabinfo.html')
+
+@app.route('/getgithubinfo')
+def get_github_info():
+    return render_template('html/getgithubinfo.html')
+
 @app.route('/getinfo')
 def getinfo():
     return render_template('html/getinfo.html')

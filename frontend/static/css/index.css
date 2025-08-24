@@ -2,17 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #b2aeae;
+  background-color: #001222;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 a {
-  justify-content: center;
-}
-
-.links {
-  margin-top: 20%;
-  font-size: 24px;
+  color: white;
+  padding-bottom: 25px;
   text-align: center;
 }
