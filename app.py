@@ -20,10 +20,6 @@ def getinfo():
 def api():
     return jsonify({'message': 'Welcome to the Repo Info API'})
 
-@app.route('/api/rinfo', methods=['GET'])
-def api_rinfo():
-    pass
-
 @app.route('/api/pinfo', methods=['POST'])
 def api_pinfo():
     try:
